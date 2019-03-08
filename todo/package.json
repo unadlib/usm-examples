@@ -2,11 +2,25 @@
   "name": "todo",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "babel-node test/index.ts --extensions '.ts' --ignore=' ' --root-mode upward",
+    "build": "babel src --out-dir dist --extensions '.ts' --root-mode upward"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/node": "^7.2.2",
+    "@babel/plugin-proposal-class-properties": "^7.3.0",
+    "@babel/plugin-proposal-decorators": "^7.3.0",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-typescript": "^7.1.0",
+    "@types/jest": "^23.3.13",
+    "@types/node": "^10.12.20",
+    "jest": "^24.1.0",
+    "typescript": "^3.2.4"
+  }
 }

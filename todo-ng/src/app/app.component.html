@@ -1,4 +1,9 @@
-<!-- NG-ZORRO -->
-<a href="https://github.com/NG-ZORRO/ng-zorro-antd" target="_blank" style="display: flex;align-items: center;justify-content: center;height: 100%;width: 100%;">
-  <img height="300" src="https://img.alicdn.com/tfs/TB1X.qJJgHqK1RjSZFgXXa7JXXa-89-131.svg">
-</a>
+<div>
+  <input nz-input placeholder="Basic usage" [(ngModel)]="value">
+  <button nz-button nzType="primary">Primary</button>
+  <nz-list [nzDataSource]="data" nzBordered
+           [nzHeader]="'Header'" [nzFooter]="'Footer'"
+           [nzRenderItem]="item">
+    <ng-template #item let-item><nz-list-item [nzContent]="item"></nz-list-item></ng-template>
+  </nz-list>
+</div>

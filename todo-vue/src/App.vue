@@ -1,28 +1,39 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <a-input v-model="input"/>
+    <a-button type="primary" @click="addTodo">Add</a-button>
+    <a-list
+      bordered
+      :dataSource="list">
+      <a-list-item
+        slot="renderItem"
+        slot-scope="item, index"
+        v-bind:style="{textDecoration: item.completed ? 'line-through' : ''}" 
+        @click="toggleTodo(index)">
+        {{item.text}}
+      </a-list-item>
+    </a-list>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'app',
-  components: {
-    HelloWorld
-  }
+  data () {
+    return {
+      input: '',
+      list: this.$store.state.list,
+    }
+  },
+  methods: {
+    addTodo() {
+      window.todo.add({ text: this.input, completed: false });
+      this.input = '';
+    },
+    toggleTodo(index) {
+      window.todo.toggle(index);
+    }
+  }  
 }
 </script>
-
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
