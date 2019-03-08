@@ -4,8 +4,10 @@ import { observer } from 'mobx-react'
 import './App.css';
 
 const TodoList = observer((props) => 
-  <List bordered>
+  <List
+    bordered>
   {
+    // mobx for ant list bugs.
     props.todo.list.map((item, index) =>
       <List.Item
         key={index}
