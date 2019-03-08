@@ -1,28 +1,33 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import { Button, Input, List } from 'antd';
+import { observer } from 'mobx-react'
 import './App.css';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
+const TodoList = observer((props) => 
+  <List bordered>
+  {
+    props.todo.list.map((item, index) =>
+      <List.Item
+        key={index}
+        style={{textDecoration: item.completed ? 'line-through' : ''}}
+        onClick={() => window.todo.toggle(index)}>
+        {item.text}
+      </List.Item>
+    )
   }
-}
+  </List>
+);
 
-export default App;
+export default ( props => {
+  const [state, setState] = useState(''); 
+  return (
+    <div className="App">
+      <Input value={state} onChange={e => setState(e.target.value)}/>
+      <Button type="primary" onClick={() => {
+        window.todo.add({ text: state });
+        setState('');
+      }}>Add</Button>
+      <TodoList todo={props.todo}/>
+    </div>
+  )
+});
