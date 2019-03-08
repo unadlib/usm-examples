@@ -1,9 +1,13 @@
 <div>
-  <input nz-input placeholder="Basic usage" [(ngModel)]="value">
-  <button nz-button nzType="primary">Primary</button>
-  <nz-list [nzDataSource]="data" nzBordered
-           [nzHeader]="'Header'" [nzFooter]="'Footer'"
-           [nzRenderItem]="item">
-    <ng-template #item let-item><nz-list-item [nzContent]="item"></nz-list-item></ng-template>
+  <input nz-input [(ngModel)]="input">
+  <button nz-button nzType="primary" (click)="add(input)">Add</button>
+  <nz-list
+    nzBordered>
+    <nz-list-item
+      *ngFor="let item of list;let i = index"
+      [nzContent]="item.text"
+      [ngStyle]="{'text-decoration': item.completed ? 'line-through' : ''}"
+      (click)="toggle(i)">
+    </nz-list-item>
   </nz-list>
 </div>
