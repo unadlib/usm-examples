@@ -1,29 +1,32 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
+import { connect } from 'react-redux'
 import { Button, Input, List } from 'antd';
 import './App.css';
 
-const data = [
-  'Racing car sprays burning fuel into crowd.',
-  'Japanese princess to wed commoner.',
-  'Australian walks 100km after outback crash.',
-  'Man charged over missing wedding girl.',
-  'Los Angeles battles huge wildfires.',
-];
-
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <Input />
-        <Button type="primary">Button</Button>
-        <List
-          bordered
-          dataSource={data}
-          renderItem={item => (<List.Item>{item}</List.Item>)}
-        />
-      </div>
-    );
-  }
-}
-
-export default App;
+export default connect(
+  state => ({
+    list: state.list
+  })
+)( props => {
+  const [state, setState] = useState('');
+  return (
+    <div className="App">
+      <Input value={state} onChange={e => setState(e.target.value)}/>
+      <Button type="primary" onClick={() => {
+        window.todo.add({ text: state });
+        setState('');
+      }}>Add</Button>
+      <List
+        bordered
+        dataSource={props.list}
+        renderItem={(item, index) => 
+          <List.Item 
+            style={{textDecoration: item.completed ? 'line-through' : ''}}
+            onClick={() => window.todo.toggle(index)}>
+            {item.text}
+          </List.Item>
+        }
+      />
+    </div>
+  )
+});
