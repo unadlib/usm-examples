@@ -1,6 +1,7 @@
 {
 	"scripts": {
-		"start": "lerna run start --stream"
+		"start": "lerna run start --stream",
+		"watch": "lerna run watch --scope=todo --stream"
 	},
 	"devDependencies": {
 		"lerna": "^2.11.0"
