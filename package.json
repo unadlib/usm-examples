@@ -1,4 +1,7 @@
 {
+	"scripts": {
+		"start": "lerna run start --stream"
+	},
 	"devDependencies": {
 		"lerna": "^2.11.0"
 	}
