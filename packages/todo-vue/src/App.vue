@@ -7,10 +7,13 @@
       :dataSource="list">
       <a-list-item
         slot="renderItem"
-        slot-scope="item, index"
-        :style="{textDecoration: item.completed ? 'line-through' : ''}" 
-        @click="toggleTodo(index)">
-        {{item.text}}
+        slot-scope="item, index">
+        <a-icon type="close" @click="removeTodo(index)" />
+        <span
+          :style="{textDecoration: item.completed ? 'line-through' : ''}" 
+          @click="toggleTodo(index)">
+          {{item.text}}
+        </span>
       </a-list-item>
     </a-list>
   </div>
@@ -33,6 +36,9 @@ export default {
     },
     toggleTodo(index) {
       window.todo.toggle(index);
+    },
+    removeTodo(index) {
+      window.todo.remove(index);
     }
   }  
 }

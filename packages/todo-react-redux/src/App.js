@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux'
-import { Button, Input, List } from 'antd';
+import { Button, Input, List, Icon } from 'antd';
 import './App.css';
 
 export default connect(
@@ -20,10 +20,14 @@ export default connect(
         bordered
         dataSource={props.list}
         renderItem={(item, index) => 
-          <List.Item 
-            style={{textDecoration: item.completed ? 'line-through' : ''}}
-            onClick={() => window.todo.toggle(index)}>
-            {item.text}
+          <List.Item
+            key={index}>
+            <Icon type="close" onClick={() => window.todo.remove(index)}  />
+            <span
+              style={{textDecoration: item.completed ? 'line-through' : ''}}
+              onClick={() => window.todo.toggle(index)}>
+              {item.text}
+            </span>
           </List.Item>
         }
       />

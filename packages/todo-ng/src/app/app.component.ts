@@ -13,16 +13,8 @@ export class AppComponent {
     public todoService: TodoService
   ) {}
 
-  get list() {
-    return this.todoService.list;
-  }
-
   add(text) {
     this.todoService.add({ text, completed: false });
     this.input = '';
-  }
-
-  toggle(index) {
-    this.todoService.toggle(index);
   }
 }

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, Input, List } from 'antd';
+import { Button, Input, List, Icon } from 'antd';
 import { observer } from 'mobx-react'
 import './App.css';
 
@@ -10,10 +10,13 @@ const TodoList = observer((props) =>
     // mobx for ant list bugs.
     props.todo.list.map((item, index) =>
       <List.Item
-        key={index}
-        style={{textDecoration: item.completed ? 'line-through' : ''}}
-        onClick={() => window.todo.toggle(index)}>
-        {item.text}
+        key={index}>
+        <Icon type="close" onClick={() => window.todo.remove(index)}  />
+        <span
+          style={{textDecoration: item.completed ? 'line-through' : ''}}
+          onClick={() => window.todo.toggle(index)}>
+          {item.text}
+        </span>
       </List.Item>
     )
   }

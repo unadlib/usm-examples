@@ -9,7 +9,9 @@ export function generateTodoModule(Module: any, state: any, action: any) {
   }
 
   class TodoList extends Module implements State {  
-    @state list: Todo[] = [{text:'test', completed: false}];
+    @state list: Todo[] = [{text:'test', completed: true}];
+    @state a = 1;
+    @state b = 1;
 
     @action
     add(todo: Todo, state: State) {
@@ -18,10 +20,23 @@ export function generateTodoModule(Module: any, state: any, action: any) {
 
     @action
     toggle(index: number, state: State){
-      const todo = state.list.find((_,key) => key === index);
-      if (typeof todo === 'object') {
-        todo.completed = !todo.completed;
-      }
+      const todo = state.list[index];
+      todo.completed = !todo.completed;
+    }
+    
+    @action
+    edit(text: string, index: number, state: State) {
+      state.list[index].text = text;
+    }
+  
+    @action
+    remove(index: number, state: State) {
+      state.list.splice(index, 1);
+    }
+  
+    @action
+    clearAllCompleted(state: State) {
+      state.list = state.list.filter(({ completed }) => !completed);
     }
   }
   

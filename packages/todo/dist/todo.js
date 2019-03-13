@@ -25,7 +25,7 @@ require("core-js/modules/web.dom.iterable");
 
 require("core-js/modules/es6.array.for-each");
 
-require("core-js/modules/es6.array.find");
+require("core-js/modules/es6.array.filter");
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -52,7 +52,7 @@ function _applyDecoratedDescriptor(target, property, decorators, descriptor, con
 function _initializerWarningHelper(descriptor, context) { throw new Error('Decorating class property failed. Please ensure that ' + 'proposal-class-properties is enabled and set to use loose mode. ' + 'To use proposal-class-properties in spec mode with decorators, wait for ' + 'the next major version of decorators in stage 2.'); }
 
 function generateTodoModule(Module, state, action) {
-  var _class, _descriptor, _temp;
+  var _class, _descriptor, _descriptor2, _descriptor3, _temp;
 
   var TodoList = (_class = (_temp =
   /*#__PURE__*/
@@ -74,6 +74,10 @@ function generateTodoModule(Module, state, action) {
 
       _initializerDefineProperty(_this, "list", _descriptor, _assertThisInitialized(_this));
 
+      _initializerDefineProperty(_this, "a", _descriptor2, _assertThisInitialized(_this));
+
+      _initializerDefineProperty(_this, "b", _descriptor3, _assertThisInitialized(_this));
+
       return _this;
     }
 
@@ -85,13 +89,26 @@ function generateTodoModule(Module, state, action) {
     }, {
       key: "toggle",
       value: function toggle(index, state) {
-        var todo = state.list.find(function (_, key) {
-          return key === index;
+        var todo = state.list[index];
+        todo.completed = !todo.completed;
+      }
+    }, {
+      key: "edit",
+      value: function edit(text, index, state) {
+        state.list[index].text = text;
+      }
+    }, {
+      key: "remove",
+      value: function remove(index, state) {
+        state.list.splice(index, 1);
+      }
+    }, {
+      key: "clearAllCompleted",
+      value: function clearAllCompleted(state) {
+        state.list = state.list.filter(function (_ref) {
+          var completed = _ref.completed;
+          return !completed;
         });
-
-        if (_typeof(todo) === 'object') {
-          todo.completed = !todo.completed;
-        }
       }
     }]);
 
@@ -103,9 +120,23 @@ function generateTodoModule(Module, state, action) {
     initializer: function initializer() {
       return [{
         text: 'test',
-        completed: false
+        completed: true
       }];
     }
-  }), _applyDecoratedDescriptor(_class.prototype, "add", [action], Object.getOwnPropertyDescriptor(_class.prototype, "add"), _class.prototype), _applyDecoratedDescriptor(_class.prototype, "toggle", [action], Object.getOwnPropertyDescriptor(_class.prototype, "toggle"), _class.prototype)), _class);
+  }), _descriptor2 = _applyDecoratedDescriptor(_class.prototype, "a", [state], {
+    configurable: true,
+    enumerable: true,
+    writable: true,
+    initializer: function initializer() {
+      return 1;
+    }
+  }), _descriptor3 = _applyDecoratedDescriptor(_class.prototype, "b", [state], {
+    configurable: true,
+    enumerable: true,
+    writable: true,
+    initializer: function initializer() {
+      return 1;
+    }
+  }), _applyDecoratedDescriptor(_class.prototype, "add", [action], Object.getOwnPropertyDescriptor(_class.prototype, "add"), _class.prototype), _applyDecoratedDescriptor(_class.prototype, "toggle", [action], Object.getOwnPropertyDescriptor(_class.prototype, "toggle"), _class.prototype), _applyDecoratedDescriptor(_class.prototype, "edit", [action], Object.getOwnPropertyDescriptor(_class.prototype, "edit"), _class.prototype), _applyDecoratedDescriptor(_class.prototype, "remove", [action], Object.getOwnPropertyDescriptor(_class.prototype, "remove"), _class.prototype), _applyDecoratedDescriptor(_class.prototype, "clearAllCompleted", [action], Object.getOwnPropertyDescriptor(_class.prototype, "clearAllCompleted"), _class.prototype)), _class);
   return TodoList;
 }
