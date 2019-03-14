@@ -52,7 +52,7 @@ function _applyDecoratedDescriptor(target, property, decorators, descriptor, con
 function _initializerWarningHelper(descriptor, context) { throw new Error('Decorating class property failed. Please ensure that ' + 'proposal-class-properties is enabled and set to use loose mode. ' + 'To use proposal-class-properties in spec mode with decorators, wait for ' + 'the next major version of decorators in stage 2.'); }
 
 function generateTodoModule(Module, state, action) {
-  var _class, _descriptor, _descriptor2, _descriptor3, _temp;
+  var _class, _descriptor, _temp;
 
   var TodoList = (_class = (_temp =
   /*#__PURE__*/
@@ -73,10 +73,6 @@ function generateTodoModule(Module, state, action) {
       _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(TodoList)).call.apply(_getPrototypeOf2, [this].concat(args)));
 
       _initializerDefineProperty(_this, "list", _descriptor, _assertThisInitialized(_this));
-
-      _initializerDefineProperty(_this, "a", _descriptor2, _assertThisInitialized(_this));
-
-      _initializerDefineProperty(_this, "b", _descriptor3, _assertThisInitialized(_this));
 
       return _this;
     }
@@ -120,22 +116,8 @@ function generateTodoModule(Module, state, action) {
     initializer: function initializer() {
       return [{
         text: 'test',
-        completed: true
+        completed: false
       }];
-    }
-  }), _descriptor2 = _applyDecoratedDescriptor(_class.prototype, "a", [state], {
-    configurable: true,
-    enumerable: true,
-    writable: true,
-    initializer: function initializer() {
-      return 1;
-    }
-  }), _descriptor3 = _applyDecoratedDescriptor(_class.prototype, "b", [state], {
-    configurable: true,
-    enumerable: true,
-    writable: true,
-    initializer: function initializer() {
-      return 1;
     }
   }), _applyDecoratedDescriptor(_class.prototype, "add", [action], Object.getOwnPropertyDescriptor(_class.prototype, "add"), _class.prototype), _applyDecoratedDescriptor(_class.prototype, "toggle", [action], Object.getOwnPropertyDescriptor(_class.prototype, "toggle"), _class.prototype), _applyDecoratedDescriptor(_class.prototype, "edit", [action], Object.getOwnPropertyDescriptor(_class.prototype, "edit"), _class.prototype), _applyDecoratedDescriptor(_class.prototype, "remove", [action], Object.getOwnPropertyDescriptor(_class.prototype, "remove"), _class.prototype), _applyDecoratedDescriptor(_class.prototype, "clearAllCompleted", [action], Object.getOwnPropertyDescriptor(_class.prototype, "clearAllCompleted"), _class.prototype)), _class);
   return TodoList;

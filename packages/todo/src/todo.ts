@@ -9,9 +9,7 @@ export function generateTodoModule(Module: any, state: any, action: any) {
   }
 
   class TodoList extends Module implements State {  
-    @state list: Todo[] = [{text:'test', completed: true}];
-    @state a = 1;
-    @state b = 1;
+    @state list: Todo[] = [{text:'test', completed: false}];
 
     @action
     add(todo: Todo, state: State) {
