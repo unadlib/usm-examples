@@ -6790,10 +6790,10 @@ useragent@2.3.0:
     lru-cache "4.1.x"
     tmp "0.0.x"
 
-usm@^1.0.0-alpha.10:
-  version "1.0.0-alpha.10"
-  resolved "https://registry.yarnpkg.com/usm/-/usm-1.0.0-alpha.10.tgz#611da155e3619ee7f1c5736a419d30a6f9eb5e8b"
-  integrity sha512-0/V5fkb2zJaeC/9J9MaPXpdMJ9BVCBazwZ47lGr1Ix+k1FJ1Cgi/QD1l15VzwrrqwT83aMEBcJ1TzKtbMWyQ1w==
+usm@^1.0.0-alpha.12:
+  version "1.0.0-alpha.12"
+  resolved "https://registry.yarnpkg.com/usm/-/usm-1.0.0-alpha.12.tgz#537b20b659e3747a5b94bc59a93394fc1118b02f"
+  integrity sha512-2t+fPxcYg/GXyoD1N3snZg/YgW17FJx1MGO8ijje3LA4vOEugkUehtgq687WePC4NIfAoXwR6kUYz/gXbfutOw==
 
 util-deprecate@^1.0.1, util-deprecate@~1.0.1:
   version "1.0.2"

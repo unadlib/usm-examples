@@ -9066,6 +9066,11 @@ requires-port@^1.0.0:
   resolved "https://registry.yarnpkg.com/requires-port/-/requires-port-1.0.0.tgz#925d2601d39ac485e091cf0da5c6e694dc3dcaff"
   integrity sha1-kl0mAdOaxIXgkc8NpcbmlNw9yv8=
 
+reselect@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/reselect/-/reselect-4.0.0.tgz#f2529830e5d3d0e021408b246a206ef4ea4437f7"
+  integrity sha512-qUgANli03jjAyGlnbYVAV5vvnOmJnODyABz51RdBN7M4WaVu8mecZWgyQNkG8Yqe3KRGRt0l4K4B3XVEULC4CA==
+
 resize-observer-polyfill@^1.5.0:
   version "1.5.1"
   resolved "https://registry.yarnpkg.com/resize-observer-polyfill/-/resize-observer-polyfill-1.5.1.tgz#0e9020dd3d21024458d4ebd27e23e40269810464"
@@ -10334,24 +10339,20 @@ use@^3.1.0:
   resolved "https://registry.yarnpkg.com/use/-/use-3.1.1.tgz#d50c8cac79a19fbc20f2911f56eb973f4e10070f"
   integrity sha512-cwESVXlO3url9YWlFW/TA9cshCEhtu7IKJ/p5soJ/gGpj7vbvFrAY/eIioQ6Dw23KjZhYgiIo8HOs1nQ2vr/oQ==
 
-usm-redux@^1.0.0-alpha.10:
-  version "1.0.0-alpha.10"
-  resolved "https://registry.yarnpkg.com/usm-redux/-/usm-redux-1.0.0-alpha.10.tgz#9deae2b8181069eef69e0c3c32d9241e4ed202b1"
-  integrity sha512-ZUNggcEa1XBzK/fbKLcBZIcNVC2CA1Zb4ABSUMp5balBIVFPvKth9BA5zAiemvw0sVjanTzNTcMKDu2L0Eydpg==
+usm-redux@^1.0.0-alpha.12:
+  version "1.0.0-alpha.12"
+  resolved "https://registry.yarnpkg.com/usm-redux/-/usm-redux-1.0.0-alpha.12.tgz#defefec4db1ca216230a00929c924a96f418bca9"
+  integrity sha512-jnOYSikUXvlxKhghkLpCcnmiNIxikpPhk44EjTpGhSp7/UpuG44hzAswHoVS/BnNY30RLXtPWbWncDsJjkVofw==
   dependencies:
     immer "^1.12.1"
     redux "^4.0.1"
-    usm "^1.0.0-alpha.10"
+    reselect "^4.0.0"
+    usm "^1.0.0-alpha.12"
 
-usm@^1.0.0-alpha.10:
-  version "1.0.0-alpha.10"
-  resolved "https://registry.yarnpkg.com/usm/-/usm-1.0.0-alpha.10.tgz#611da155e3619ee7f1c5736a419d30a6f9eb5e8b"
-  integrity sha512-0/V5fkb2zJaeC/9J9MaPXpdMJ9BVCBazwZ47lGr1Ix+k1FJ1Cgi/QD1l15VzwrrqwT83aMEBcJ1TzKtbMWyQ1w==
-
-usm@^1.0.0-alpha.9:
-  version "1.0.0-alpha.9"
-  resolved "https://registry.yarnpkg.com/usm/-/usm-1.0.0-alpha.9.tgz#0c7c38ba52e1293d3c0c335105e803893360e678"
-  integrity sha512-g2aJvqI3zKKRHdJCFg1M1oN73leJTYKxgF0vguCMKv7WE+pMARBmVfn1lmZHiIvppFQV7miPhhBPfuo+W0RTYg==
+usm@^1.0.0-alpha.12:
+  version "1.0.0-alpha.12"
+  resolved "https://registry.yarnpkg.com/usm/-/usm-1.0.0-alpha.12.tgz#537b20b659e3747a5b94bc59a93394fc1118b02f"
+  integrity sha512-2t+fPxcYg/GXyoD1N3snZg/YgW17FJx1MGO8ijje3LA4vOEugkUehtgq687WePC4NIfAoXwR6kUYz/gXbfutOw==
 
 util-deprecate@^1.0.1, util-deprecate@~1.0.1:
   version "1.0.2"
