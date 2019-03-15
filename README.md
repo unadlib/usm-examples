@@ -1,6 +1,6 @@
 # usm-examples
 
-It's Todo examples about `usm` with React/Angular/Vue.
+It's USM's TodoList examples with React+Redux/React+MobX/Angular/Vue+Vuex in same design(Ant-Design)
 
 ## Running
 
