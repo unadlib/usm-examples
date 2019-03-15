@@ -27,9 +27,11 @@ export default {
   data () {
     return {
       input: '',
-      list: this.$store.state.list,
-      count: this.$store.getters.count,
     }
+  },
+  computed: {
+      list() { return this.$store.state.list },
+      count() { return this.$store.getters.count },
   },
   methods: {
     addTodo() {
