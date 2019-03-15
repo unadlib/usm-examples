@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "install": "yarn install",
+    "bootstrap": "yarn install",
     "update": "yarn add usm"
   },
   "private": true,

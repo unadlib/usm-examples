@@ -59,7 +59,7 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
-    "install": "yarn install",
+    "bootstrap": "yarn install",
     "update": "yarn add usm-mobx"
   },
   "eslintConfig": {

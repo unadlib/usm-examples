@@ -6,7 +6,7 @@
     "start": "vue-cli-service serve --open",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "install": "yarn install",
+    "bootstrap": "yarn install",
     "update": "yarn add usm-vuex"
   },
   "dependencies": {

@@ -1,6 +1,6 @@
 {
 	"scripts": {
-		"bootstrap": "lerna run install --parallel",
+		"bootstrap": "lerna run bootstrap --parallel",
 		"start": "lerna run start --parallel",
 		"watch": "lerna run watch --scope=todo --parallel"
 	},
