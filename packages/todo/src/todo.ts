@@ -30,7 +30,7 @@ export function generateTodoModule(Module: any, state: any, action: any, compute
       state.a += 1; 
     }
 
-    @state list: Todo[] = [{text:'test', completed: false}];
+    @state list: Todo[] = [{text:'test', completed: true}];
 
     @action
     add(todo: Todo, state: State) {

@@ -157,7 +157,7 @@ function generateTodoModule(Module, state, action, computed) {
     initializer: function initializer() {
       return [{
         text: 'test',
-        completed: false
+        completed: true
       }];
     }
   }), _applyDecoratedDescriptor(_class.prototype, "add", [action], Object.getOwnPropertyDescriptor(_class.prototype, "add"), _class.prototype), _applyDecoratedDescriptor(_class.prototype, "toggle", [action], Object.getOwnPropertyDescriptor(_class.prototype, "toggle"), _class.prototype), _applyDecoratedDescriptor(_class.prototype, "edit", [action], Object.getOwnPropertyDescriptor(_class.prototype, "edit"), _class.prototype), _applyDecoratedDescriptor(_class.prototype, "remove", [action], Object.getOwnPropertyDescriptor(_class.prototype, "remove"), _class.prototype), _applyDecoratedDescriptor(_class.prototype, "clearAllCompleted", [action], Object.getOwnPropertyDescriptor(_class.prototype, "clearAllCompleted"), _class.prototype)), _class);

@@ -7,7 +7,7 @@
     "bootstrap": "yarn install",
     "test": "babel-node test/index.ts --extensions '.ts' --ignore=' ' --root-mode upward",
     "build": "babel src --out-dir dist --extensions '.ts' --root-mode upward",
-    "watch": "babel src --watch --out-dir dist --extensions '.ts' --root-mode upward"
+    "start": "babel src --watch --out-dir dist --extensions '.ts' --root-mode upward"
   },
   "keywords": [],
   "author": "",
