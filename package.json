@@ -1,7 +1,8 @@
 {
 	"scripts": {
-		"start": "lerna run start --stream",
-		"watch": "lerna run watch --scope=todo --stream"
+		"bootstrap": "lerna run install --parallel",
+		"start": "lerna run start --parallel",
+		"watch": "lerna run watch --scope=todo --parallel"
 	},
 	"devDependencies": {
 		"lerna": "^2.11.0"

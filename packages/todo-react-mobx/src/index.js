@@ -5,7 +5,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 import Module, { state, action, computed } from 'usm-mobx';
-import { generateTodoModule } from 'todo';
+import { generateTodoModule } from '../../todo/dist/todo';
 
 const Todo = generateTodoModule(Module, state, action, computed);
 const todo = Todo.create();

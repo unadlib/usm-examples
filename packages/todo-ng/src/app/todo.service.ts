@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import Module, { state, action, computed } from 'usm';
-import { generateTodoModule } from 'todo';
+import { generateTodoModule } from '../../../todo/dist/todo';
 
 const TodoModule = generateTodoModule(Module, state, action, computed);
 // temp type

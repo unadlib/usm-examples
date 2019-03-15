@@ -6,7 +6,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 import Module, { state, action, computed } from 'usm-redux';
-import { generateTodoModule } from 'todo';
+import { generateTodoModule } from '../../todo/dist/todo';
 
 const Todo = generateTodoModule(Module, state, action, computed);
 const todo = Todo.create();
