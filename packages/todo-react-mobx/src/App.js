@@ -4,24 +4,28 @@ import { observer } from 'mobx-react'
 import './App.css';
 
 const TodoList = observer((props) => 
-  <List
-    bordered>
-  {
-    // mobx for ant list bugs.
-    props.todo.list.map((item, index) =>
-      <List.Item
-        key={index}>
-        <Icon type="close" onClick={() => window.todo.remove(index)}  />
-        <span
-          style={{textDecoration: item.completed ? 'line-through' : ''}}
-          onClick={() => window.todo.toggle(index)}>
-          {item.text}
-        </span>
-      </List.Item>
-    )
-  }
-  </List>
+  <>
+    <List
+      bordered>
+      {
+        // mobx for ant list bugs.
+        props.todo.list.map((item, index) =>
+          <List.Item
+            key={index}>
+            <Icon type="close" onClick={() => window.todo.remove(index)}  />
+            <span
+              style={{textDecoration: item.completed ? 'line-through' : ''}}
+              onClick={() => window.todo.toggle(index)}>
+              {item.text}
+            </span>
+          </List.Item>
+        )
+      }
+    </List>
+    <b onClick={() => props.todo.increase()}>{props.todo.count}</b>
+  </>
 );
+
 
 export default ( props => {
   const [state, setState] = useState(''); 

@@ -51,8 +51,8 @@ function _applyDecoratedDescriptor(target, property, decorators, descriptor, con
 
 function _initializerWarningHelper(descriptor, context) { throw new Error('Decorating class property failed. Please ensure that ' + 'proposal-class-properties is enabled and set to use loose mode. ' + 'To use proposal-class-properties in spec mode with decorators, wait for ' + 'the next major version of decorators in stage 2.'); }
 
-function generateTodoModule(Module, state, action) {
-  var _class, _descriptor, _temp;
+function generateTodoModule(Module, state, action, computed) {
+  var _class, _descriptor, _descriptor2, _descriptor3, _descriptor4, _temp;
 
   var TodoList = (_class = (_temp =
   /*#__PURE__*/
@@ -72,12 +72,23 @@ function generateTodoModule(Module, state, action) {
 
       _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(TodoList)).call.apply(_getPrototypeOf2, [this].concat(args)));
 
-      _initializerDefineProperty(_this, "list", _descriptor, _assertThisInitialized(_this));
+      _initializerDefineProperty(_this, "a", _descriptor, _assertThisInitialized(_this));
+
+      _initializerDefineProperty(_this, "b", _descriptor2, _assertThisInitialized(_this));
+
+      _initializerDefineProperty(_this, "count", _descriptor3, _assertThisInitialized(_this));
+
+      _initializerDefineProperty(_this, "list", _descriptor4, _assertThisInitialized(_this));
 
       return _this;
     }
 
     _createClass(TodoList, [{
+      key: "increase",
+      value: function increase(state) {
+        state.a += 1;
+      }
+    }, {
       key: "add",
       value: function add(todo, state) {
         state.list.push(todo);
@@ -109,7 +120,37 @@ function generateTodoModule(Module, state, action) {
     }]);
 
     return TodoList;
-  }(Module), _temp), (_descriptor = _applyDecoratedDescriptor(_class.prototype, "list", [state], {
+  }(Module), _temp), (_descriptor = _applyDecoratedDescriptor(_class.prototype, "a", [state], {
+    configurable: true,
+    enumerable: true,
+    writable: true,
+    initializer: function initializer() {
+      return 1;
+    }
+  }), _descriptor2 = _applyDecoratedDescriptor(_class.prototype, "b", [state], {
+    configurable: true,
+    enumerable: true,
+    writable: true,
+    initializer: function initializer() {
+      return 1;
+    }
+  }), _descriptor3 = _applyDecoratedDescriptor(_class.prototype, "count", [computed], {
+    configurable: true,
+    enumerable: true,
+    writable: true,
+    initializer: function initializer() {
+      var _this2 = this;
+
+      return [function () {
+        return _this2.a;
+      }, function () {
+        return _this2.b;
+      }, function (a, b) {
+        console.log('count => computing');
+        return a + b;
+      }];
+    }
+  }), _applyDecoratedDescriptor(_class.prototype, "increase", [action], Object.getOwnPropertyDescriptor(_class.prototype, "increase"), _class.prototype), _descriptor4 = _applyDecoratedDescriptor(_class.prototype, "list", [state], {
     configurable: true,
     enumerable: true,
     writable: true,

@@ -4,8 +4,9 @@ import { Button, Input, List, Icon } from 'antd';
 import './App.css';
 
 export default connect(
-  state => ({
-    list: state.list
+  (state, props) => ({
+    list: state.list,
+    count: props.todo.count,
   })
 )( props => {
   const [state, setState] = useState('');
@@ -31,6 +32,7 @@ export default connect(
           </List.Item>
         }
       />
+      <b onClick={() => window.todo.increase()}>{props.count}</b>
     </div>
   )
 });

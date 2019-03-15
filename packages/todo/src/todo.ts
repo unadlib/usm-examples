@@ -1,4 +1,4 @@
-export function generateTodoModule(Module: any, state: any, action: any) {
+export function generateTodoModule(Module: any, state: any, action: any, computed: any) {
   interface Todo {
     text: string;
     completed?: boolean; 
@@ -6,9 +6,30 @@ export function generateTodoModule(Module: any, state: any, action: any) {
 
   interface State {
     list: Todo[];
+    a: number;
+    b: number;
   }
 
-  class TodoList extends Module implements State {  
+  class TodoList extends Module implements State {
+    @state a = 1;
+
+    @state b = 1;
+
+    @computed
+    count = [
+      () => this.a,
+      () => this.b,
+      (a: number, b: number) => {
+        console.log('count => computing');
+        return a + b;
+      }
+    ];
+
+    @action
+    increase(state: State) {
+      state.a += 1; 
+    }
+
     @state list: Todo[] = [{text:'test', completed: false}];
 
     @action

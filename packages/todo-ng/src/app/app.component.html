@@ -11,4 +11,5 @@
       <i nz-icon type="close" theme="outline" (click)="todoService.remove(i)"></i>
     </nz-list-item>
   </nz-list>
+  <b (click)="todoService.increase()">{{todoService.count}}</b>
 </div>

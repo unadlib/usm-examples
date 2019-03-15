@@ -16,6 +16,7 @@
         </span>
       </a-list-item>
     </a-list>
+    <b @click="increase()">{{count}}</b>
   </div>
 </template>
 
@@ -27,6 +28,7 @@ export default {
     return {
       input: '',
       list: this.$store.state.list,
+      count: this.$store.getters.count,
     }
   },
   methods: {
@@ -39,6 +41,9 @@ export default {
     },
     removeTodo(index) {
       window.todo.remove(index);
+    },
+    increase() {
+      window.todo.increase();
     }
   }  
 }

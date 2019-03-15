@@ -5,16 +5,16 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-import Module, { state, action } from 'usm-redux';
+import Module, { state, action, computed } from 'usm-redux';
 import { generateTodoModule } from 'todo';
 
-const Todo = generateTodoModule(Module, state, action);
+const Todo = generateTodoModule(Module, state, action, computed);
 const todo = Todo.create();
 window.todo = todo;
 
 ReactDOM.render(
   <Provider store={todo.store}>
-    <App />
+    <App todo={todo} />
   </Provider>,
   document.getElementById('root')
 );

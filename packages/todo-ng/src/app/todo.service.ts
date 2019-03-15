@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
-import Module, { state, action } from 'usm';
+import Module, { state, action, computed } from 'usm';
 import { generateTodoModule } from 'todo';
 
-const TodoModule = generateTodoModule(Module, state, action);
+const TodoModule = generateTodoModule(Module, state, action, computed);
 // temp type
 interface TodoService {
   list: [];
