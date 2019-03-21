@@ -21,6 +21,7 @@
 </template>
 
 <script>
+import { todo } from './main';
 
 export default {
   name: 'app',
@@ -35,17 +36,17 @@ export default {
   },
   methods: {
     addTodo() {
-      window.todo.add({ text: this.input, completed: false });
+      todo.add({ text: this.input, completed: false });
       this.input = '';
     },
     toggleTodo(index) {
-      window.todo.toggle(index);
+      todo.toggle(index);
     },
     removeTodo(index) {
-      window.todo.remove(index);
+      todo.remove(index);
     },
     increase() {
-      window.todo.increase();
+      todo.increase();
     }
   }  
 }

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Button, Input, List, Icon } from 'antd';
 import { observer } from 'mobx-react'
 import './App.css';
-
+import { todo } from './';
 const TodoList = observer((props) => 
   <>
     <List
@@ -12,10 +12,10 @@ const TodoList = observer((props) =>
         props.todo.list.map((item, index) =>
           <List.Item
             key={index}>
-            <Icon type="close" onClick={() => window.todo.remove(index)}  />
+            <Icon type="close" onClick={() => todo.remove(index)}  />
             <span
               style={{textDecoration: item.completed ? 'line-through' : ''}}
-              onClick={() => window.todo.toggle(index)}>
+              onClick={() => todo.toggle(index)}>
               {item.text}
             </span>
           </List.Item>
@@ -33,7 +33,7 @@ export default ( props => {
     <div className="App">
       <Input value={state} onChange={e => setState(e.target.value)}/>
       <Button type="primary" onClick={() => {
-        window.todo.add({ text: state });
+        todo.add({ text: state });
         setState('');
       }}>Add</Button>
       <TodoList todo={props.todo}/>

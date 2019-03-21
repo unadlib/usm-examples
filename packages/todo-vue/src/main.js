@@ -10,8 +10,7 @@ const Todo = generateTodoModule(Module, state, action, computed)
 
 Vue.config.productionTip = false
 Vue.use(Antd)
-const todo = Todo.create()
-window.todo = todo
+export const todo = Todo.create()
 
 new Vue({
   store: todo.store,

@@ -9,8 +9,7 @@ import Module, { state, action, computed } from 'usm-redux';
 import { generateTodoModule } from '../../todo/dist/todo';
 
 const Todo = generateTodoModule(Module, state, action, computed);
-const todo = Todo.create();
-window.todo = todo;
+export const todo = Todo.create();
 
 ReactDOM.render(
   <Provider store={todo.store}>
