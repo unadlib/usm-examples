@@ -7687,19 +7687,19 @@ use@^3.1.0:
   resolved "https://registry.yarnpkg.com/use/-/use-3.1.1.tgz#d50c8cac79a19fbc20f2911f56eb973f4e10070f"
   integrity sha512-cwESVXlO3url9YWlFW/TA9cshCEhtu7IKJ/p5soJ/gGpj7vbvFrAY/eIioQ6Dw23KjZhYgiIo8HOs1nQ2vr/oQ==
 
-usm-vuex@^1.0.0-alpha.14:
-  version "1.0.0-alpha.14"
-  resolved "https://registry.yarnpkg.com/usm-vuex/-/usm-vuex-1.0.0-alpha.14.tgz#7c276024f82750a6d2a10809435e724cd40c286f"
-  integrity sha512-/3cyCd4IXT670pYQw7UCSQqoR2jWDtLaj+1+77sp6KG5ltBVJQBP/nYe6J9fOH/rRiwCK6XcQOR0kqBkxKCxtw==
+usm-vuex@^1.0.0-alpha.15:
+  version "1.0.0-alpha.15"
+  resolved "https://registry.yarnpkg.com/usm-vuex/-/usm-vuex-1.0.0-alpha.15.tgz#84bfb3a9d5022563713a7773c9c793e662ddebc7"
+  integrity sha512-IwYCbMei8Wt7ZI6ZwbsBm5luLEiu+hpZNGAVzWABB8Lr6wWy7rErM8bYkHeREvJ/clwS5HldNaYqcWbyE2q+Ag==
   dependencies:
-    usm "^1.0.0-alpha.14"
+    usm "^1.0.0-alpha.15"
     vue "^2.6.6"
     vuex "^3.1.0"
 
-usm@^1.0.0-alpha.14:
-  version "1.0.0-alpha.14"
-  resolved "https://registry.yarnpkg.com/usm/-/usm-1.0.0-alpha.14.tgz#7263b46f63851880a3ef339aa2d3aac01d018372"
-  integrity sha512-82QyKdAu4b8Cb+IIxvm2THQtWb1X+XJ5O9T2mVKHY6TOXZ5xg7DmnClUwzXlM26Z+1MR7BpWX/jXds5NeZ5EzQ==
+usm@^1.0.0-alpha.15:
+  version "1.0.0-alpha.15"
+  resolved "https://registry.yarnpkg.com/usm/-/usm-1.0.0-alpha.15.tgz#ecb616022ec5194d2ed4954bf38b897cd971b252"
+  integrity sha512-mEiBGwAF/53CQpTS7IO50OLR53rNvn/u1E6yQzK+r1rJIeXaPgpsHsjvsArwEPK9EpQofbDhBJwyh1PNuJFPBA==
 
 util-deprecate@^1.0.1, util-deprecate@~1.0.1:
   version "1.0.2"

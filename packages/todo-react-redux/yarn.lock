@@ -10339,20 +10339,20 @@ use@^3.1.0:
   resolved "https://registry.yarnpkg.com/use/-/use-3.1.1.tgz#d50c8cac79a19fbc20f2911f56eb973f4e10070f"
   integrity sha512-cwESVXlO3url9YWlFW/TA9cshCEhtu7IKJ/p5soJ/gGpj7vbvFrAY/eIioQ6Dw23KjZhYgiIo8HOs1nQ2vr/oQ==
 
-usm-redux@^1.0.0-alpha.14:
-  version "1.0.0-alpha.14"
-  resolved "https://registry.yarnpkg.com/usm-redux/-/usm-redux-1.0.0-alpha.14.tgz#0ee47f9a3d8c7c38b09566977fbb6a9c0639f41c"
-  integrity sha512-gkh4tteAuEo77VMINIvWrSIMa271f82wcAyNG14ZoUmE0A/oMBkBclgHXdwj4Q9KsRgB2utQRnBeyYv3tAoTyA==
+usm-redux@^1.0.0-alpha.15:
+  version "1.0.0-alpha.15"
+  resolved "https://registry.yarnpkg.com/usm-redux/-/usm-redux-1.0.0-alpha.15.tgz#dd9727d7d3ee867697691fc812f1445c7d6cb0aa"
+  integrity sha512-MDORDeugannT2jUzyplKAzHE9QgS5G7BEizfyzWvfAvM+QSta0HOVoJG7eaoZClIq1dIRmCrKcabEpwUFPPdWA==
   dependencies:
     immer "^1.12.1"
     redux "^4.0.1"
     reselect "^4.0.0"
-    usm "^1.0.0-alpha.14"
+    usm "^1.0.0-alpha.15"
 
-usm@^1.0.0-alpha.14:
-  version "1.0.0-alpha.14"
-  resolved "https://registry.yarnpkg.com/usm/-/usm-1.0.0-alpha.14.tgz#7263b46f63851880a3ef339aa2d3aac01d018372"
-  integrity sha512-82QyKdAu4b8Cb+IIxvm2THQtWb1X+XJ5O9T2mVKHY6TOXZ5xg7DmnClUwzXlM26Z+1MR7BpWX/jXds5NeZ5EzQ==
+usm@^1.0.0-alpha.15:
+  version "1.0.0-alpha.15"
+  resolved "https://registry.yarnpkg.com/usm/-/usm-1.0.0-alpha.15.tgz#ecb616022ec5194d2ed4954bf38b897cd971b252"
+  integrity sha512-mEiBGwAF/53CQpTS7IO50OLR53rNvn/u1E6yQzK+r1rJIeXaPgpsHsjvsArwEPK9EpQofbDhBJwyh1PNuJFPBA==
 
 util-deprecate@^1.0.1, util-deprecate@~1.0.1:
   version "1.0.2"
