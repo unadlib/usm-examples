@@ -10310,18 +10310,18 @@ use@^3.1.0:
   resolved "https://registry.yarnpkg.com/use/-/use-3.1.1.tgz#d50c8cac79a19fbc20f2911f56eb973f4e10070f"
   integrity sha512-cwESVXlO3url9YWlFW/TA9cshCEhtu7IKJ/p5soJ/gGpj7vbvFrAY/eIioQ6Dw23KjZhYgiIo8HOs1nQ2vr/oQ==
 
-usm-mobx@^1.0.0-alpha.15:
-  version "1.0.0-alpha.15"
-  resolved "https://registry.yarnpkg.com/usm-mobx/-/usm-mobx-1.0.0-alpha.15.tgz#d5cb1bf28eafc643acd6b3b45cf6986f039197d1"
-  integrity sha512-xSpziOlIfrSdp5fJAw9gA5phZrPbupXLld84N8I6tW0DwRziV7qVbSl1z2VMRsEKKEck0Rh0Nii07a5RHgNBew==
+usm-mobx@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/usm-mobx/-/usm-mobx-1.2.1.tgz#ea9fbabe6e3c13c9cb470ac91f8c5d63a79a0412"
+  integrity sha512-Ic/EUKJU1bQRnBMOTLN1x8Yv3Aj8GoVGvmKJGBMJOFmGktHYBMwVpwALKm8mAsYBkaM+1R7n6D/yyuxTL9PTIg==
   dependencies:
     mobx "^5.9.0"
-    usm "^1.0.0-alpha.15"
+    usm "^1.2.1"
 
-usm@^1.0.0-alpha.15:
-  version "1.0.0-alpha.15"
-  resolved "https://registry.yarnpkg.com/usm/-/usm-1.0.0-alpha.15.tgz#ecb616022ec5194d2ed4954bf38b897cd971b252"
-  integrity sha512-mEiBGwAF/53CQpTS7IO50OLR53rNvn/u1E6yQzK+r1rJIeXaPgpsHsjvsArwEPK9EpQofbDhBJwyh1PNuJFPBA==
+usm@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/usm/-/usm-1.2.1.tgz#425eaa55a56dc203788545a5c5c3350148f75036"
+  integrity sha512-3lLfm1PcQQckIHm5wSWZQzDoovFT6p/dm1B2xweEN3dX/6+DuwCNIwHxEAL0dU7dKGsPWhdVMfMlVT/6cf/7KQ==
 
 util-deprecate@^1.0.1, util-deprecate@~1.0.1:
   version "1.0.2"

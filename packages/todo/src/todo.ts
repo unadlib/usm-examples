@@ -10,7 +10,7 @@ export function generateTodoModule(Module: any, state: any, action: any, compute
     b: number;
   }
 
-  class TodoList extends Module implements State {
+  class TodoList extends Module {
     @state a = 1;
 
     @state b = 1;
