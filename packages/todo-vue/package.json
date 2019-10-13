@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "ant-design-vue": "^1.3.5",
-    "usm-vuex": "^1.3.4",
+    "usm-vuex": "^1.3.6",
     "vue": "^2.6.6"
   },
   "devDependencies": {
