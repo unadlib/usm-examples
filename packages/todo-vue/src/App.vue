@@ -21,8 +21,6 @@
 </template>
 
 <script>
-import { todo } from './main';
-
 export default {
   name: 'app',
   data () {
@@ -31,22 +29,22 @@ export default {
     }
   },
   computed: {
-      list() { return this.$store.state.list },
-      count() { return this.$store.getters.count },
+      list() { return this.todo.list },
+      count() { return this.todo.count },
   },
   methods: {
     addTodo() {
-      todo.add({ text: this.input, completed: false });
+      this.todo.add({ text: this.input, completed: false });
       this.input = '';
     },
     toggleTodo(index) {
-      todo.toggle(index);
+      this.todo.toggle(index);
     },
     removeTodo(index) {
-      todo.remove(index);
+      this.todo.remove(index);
     },
     increase() {
-      todo.increase();
+      this.todo.increase();
     }
   }  
 }

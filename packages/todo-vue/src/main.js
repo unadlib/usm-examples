@@ -8,9 +8,10 @@ import { generateTodoModule } from '../../todo/dist/todo'
 import Module, { state, action, computed } from 'usm-vuex'
 const Todo = generateTodoModule(Module, state, action, computed)
 
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
 Vue.use(Antd)
-export const todo = Todo.create()
+const todo = Todo.create();
+Vue.prototype.todo = todo;
 
 new Vue({
   store: todo.store,
